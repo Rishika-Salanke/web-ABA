@@ -67,14 +67,14 @@ body{
 background: #6247AA;
 display:block;
 }
-        .box button{
+.box button{
             border: 0;
     background: none;
     display: block;
     margin:20px auto;
     text-align:center;
     font-size:1005;
-    border:3px solid #6247AA;
+    border:3px solid #6247AA;;
     padding:14px 40px;
     outline: none;
     color:black ;
@@ -82,21 +82,7 @@ display:block;
     transition:0.25s;
     cursor:pointer;
         }
-        .box2 button{
-            border: 0;
-    background: none;
-    display: block;
-    margin:20px auto;
-    text-align:center;
-    font-size:1005;
-    border:3px solid #6247AA;
-    padding:14px 40px;
-    outline: none;
-    color:black ;
-    border-radius: 24px;
-    transition:0.25s;
-    cursor:pointer;
-        }
+        
         .box1 a:hover{
             display:block;
             background-color:  #6247AA;
@@ -108,24 +94,26 @@ display:block;
             display: none;
             border: 0;
             position: absolute;
-            background-color:  #bd6aec;
-            min-width: 160px;
+            background-color:  #cf86ee;
+            min-width: 150px;
             z-index: 1;
-            border:3px solid #7e47aa;
+            border:2px solid  #6247AA ;
             border-radius: 24px;
             outline:none;
             
-        }
-        .box-content a {
-            color:black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
         }
         
         .box1:hover .box-content {
             display: block;
         }
+        .box-content button[type="submit"]:hover{
+background:#6247AA;
+display:block;}
+
+.box-content button{
+    border:none;
+}
+
 </style>   
 </head>    
 <body>  
@@ -140,8 +128,8 @@ display:block;
             <div class="box1">
             <button class="box2" type="submit">LOGIN</button>
         <div class="box-content">
-            <a href="#">Teacher</a>
-            <a href="#">Student</a>
+            <button type="submit">Teacher</button>
+            <button type="submit">Student</button>
         </div>
     </div> 
             <button type="button">Forgot password</button>    
