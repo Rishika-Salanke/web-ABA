@@ -1,0 +1,154 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title> purple </title>  
+<style>   
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background:rgba(130, 29, 197, 0.699);
+}
+
+.box{
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%,-50%);
+    background:#cf86ee;
+    text-align: center;
+    border-radius: 14em;
+    box-shadow: 5px 5px 50px 50px #E2CFEA;
+    animation: animatingBg 5s linear infinite;
+}
+
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.box input{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #6247AA;
+    padding: 14px 10px;
+    width: 200px;
+    outline:none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    font-size:1005;
+    border:3px solid #6247AA;
+    padding:14px 40px;
+    outline: none;
+    color:black;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor:pointer;
+}
+
+.box1 button[type="submit"]:hover{
+background: #6247AA;
+display:block;
+}
+        .box button{
+            border: 0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    font-size:1005;
+    border:3px solid #6247AA;
+    padding:14px 40px;
+    outline: none;
+    color:black ;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor:pointer;
+        }
+        .box2 button{
+            border: 0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    font-size:1005;
+    border:3px solid #6247AA;
+    padding:14px 40px;
+    outline: none;
+    color:black ;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor:pointer;
+        }
+        .box1 a:hover{
+            display:block;
+            background-color:  #6247AA;
+        }
+    .box1{
+        display:inline-block;
+    }
+    .box-content  {
+            display: none;
+            border: 0;
+            position: absolute;
+            background-color:  #bd6aec;
+            min-width: 160px;
+            z-index: 1;
+            border:3px solid #7e47aa;
+            border-radius: 24px;
+            outline:none;
+            
+        }
+        .box-content a {
+            color:black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .box1:hover .box-content {
+            display: block;
+        }
+</style>   
+</head>    
+<body>  
+  
+    <form>  
+        
+        <div class="box">   
+              <h2>LOGIN</h2>
+            <input type="text" placeholder=" Username" name="username" required>  
+             
+            <input type="password" placeholder="Password" name="password" required> 
+            <div class="box1">
+            <button class="box2" type="submit">LOGIN</button>
+        <div class="box-content">
+            <a href="#">Teacher</a>
+            <a href="#">Student</a>
+        </div>
+    </div> 
+            <button type="button">Forgot password</button>    
+        
+        </div>
+       
+        
+    </form>     
+</body>     
+</html>
