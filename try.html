@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Home page</title>
+    </head>
+    <style>
+      :root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  
+  background:#f1cdf0 ;
+ 
+}
+.navigation
+
+{
+
+position: relative;
+width: 280px;
+height: 70px;
+background:hsl(307, 79%, 76%);
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+}
+.navigation ul{
+  display:flex;
+  width:350px;
+}
+.navigation ul li{
+  position:relative;
+  list-style: none;
+  width: 70px;
+  height:70px ;
+  z-index:1;
+}
+.navigation ul li a 
+{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+    text-align: center;
+    font-weight: 500;
+
+}
+.navigation ul li a .icon
+{
+    position:relative;
+    display: block;  
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align:center;
+    transition:0.5s;
+    color: hsl(314, 80%, 25%);
+}
+.navigation ul li:active a .icon
+{
+    transform:translateY(-35px);
+}
+.navigation ul li a .text
+{
+    position:absolute;
+    color:hsl(314, 80%, 25%);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity:0;
+    transform:translateY(20px);
+}
+.navigation ul li:active a .text
+{
+    opacity:1;  
+    transform:translateY(10px);
+}
+
+.navigation:hover{
+  transition: cubic-bezier(1,1,1);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    
+    </style>
+    <body>
+        <header>
+            <div class="list">
+                <div class="navigation">
+                <ul>
+                    <li class="list active">
+                        <a href="#">
+                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                         <span class="text"> Home</span>
+                        </a>
+        
+                    </li>
+                    <li class="list active">
+                        <a href="#">
+                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                         <span class="text"> Profile</span>
+                        </a>
+        
+                    </li>
+            
+                        </li>
+                        <li class="list active">
+                            <a href="#">
+                             <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                             <span class="text"> Contact</span>
+                            </a>
+            
+                        </li>
+                        <li class="list active">
+                            <a href="#">
+                             <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                             <span class="text"> Settings</span>
+                            </a>
+            
+                        </li>
+        
+                    <div class="indicator"></div>
+                </ul>
+            </div></div>
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+        </header>
+        <ul class="cards">
+  <li>
+    <a href="" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekdHs4fkeet8E6Eu_YXYz5OZpyQ-Sa1OOUw&usqp=CAU" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          
+          <div class="card__header-text">
+            <h3 class="card__title">DSA</h3>            
+           
+          </div>
+        </div>
+        <p class="card__description">Data Structures and Algorithm <br>3rd sem-using c-language</p>
+      </div>
+    </a>      
+  </li>
+  <li>
+    <a href="" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSenIyE6hJo1diq7x1fqXHS-HS5U454rvN5LA&usqp=CAU" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          
+          <div class="card__header-text">
+            <h3 class="card__title">HTML/CSS</h3>            
+           
+          </div>
+        </div>
+        <p class="card__description">Advanced web programming <br>Includes basic html and css along with java script impplementation</p>
+      </div>
+    </a>      
+  </li>
+  <li>
+    <a href="" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkSOEw1Q4CSzjjx4azyOC9gvTY9bccOdewzw&usqp=CAU" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          
+          <div class="card__header-text">
+            <h3 class="card__title">Python</h3>            
+           
+          </div>
+        </div>
+        <p class="card__description">Advanced python programming<br>Includes basic python and advanced appllications with implimentation</p>
+      </div>
+    </a>      
+  </li>
+</ul>
+</body>
+</html>
