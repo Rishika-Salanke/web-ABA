@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Test</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(307, 71%, 84%);
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  textarea {
+    width: 300px;
+    height: 100px;
+    resize: none;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  img {
+  border-radius: 50%;
+  
+}
+.pre img{
+    align-items: center;
+}
+</style>
+<body>
+  <header style="background-color: hsl(308, 59%, 79%)">
+    <div class="navbar">
+      <div class="imaggg">
+          <img src="https://thumbs.dreamstime.com/b/isometric-line-open-book-icon-isolated-purple-background-purple-square-button-vector-illustration-isometric-line-open-book-icon-188424317.jpg" height="100px;" width="100px;" alt="Avatar">
+      </div>
+
+   <Pre style="text-align:center;color:rgb(108, 19, 87);font-family:cursive;">
+      <b style="font-size:50px;"><i>PURPLE</i></b>
+      <i style="font-size:25px;text-align:center;color:rgb(108, 19, 87);font-family:sans-serif;">Online test platform</i>
+  </Pre>
+    </header>
+  <h1 style="color:rgb(108, 19, 87);text-align: center;font-size: 30px;">Create Test</h1>
+  <form id="testForm">
+    <label for="testName">Test Name:</label>
+    <input type="text" id="testName" name="testName" required>
+    <br>
+    <label for="testDescription">Description:</label><br>
+    <textarea id="testDescription" name="testDescription"></textarea>
+    <br>
+    <button type="button" id="addQuestion">Add Question</button> 
+    
+    <button type="submit">Save Test</button>
+  </form>
+
+  <div id="questionContainer">
+    <!-- Questions will be dynamically added here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
