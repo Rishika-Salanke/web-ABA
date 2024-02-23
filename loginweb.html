@@ -1,0 +1,199 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title> purple </title>  
+<style>   
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+    background:hsl(307, 71%, 84%);
+}
+
+.box{
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    color: black;
+    transform: translate(-50%,-50%);
+    background:hsl(292, 72%, 74%);
+    text-align: center;
+    border-radius: 14em;
+    border:2px solid black;
+    box-shadow: 5px 5px 50px 50px #E2CFEA;
+    animation: animatingBg 5s linear infinite;
+}
+
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.box input{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid hwb(309 15% 37%);
+    padding: 14px 10px;
+    width: 200px;
+    outline:none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    font-size:1005;
+    border:3px solid hwb(309 15% 37%);
+    padding:14px 40px;
+    outline: none;
+    color:black;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor:pointer;
+}
+
+.box1 button[type="submit"]:hover{
+background: hsl(292, 72%, 74%);
+display:block;
+}
+.box button{
+            border: 0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    font-size:1005;
+    border:3px solid hwb(309 15% 37%);
+    padding:14px 40px;
+    outline: none;
+    color:black ;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor:pointer;
+        }
+        
+        .box1 a:hover{
+            display:block;
+            background-color:  hwb(309 58% 7%);
+            border-radius: 10px;
+        }
+    .box1{
+        display:inline-block;
+    }
+    .box-content  {
+            display: none;
+            border: 0;
+            position: absolute;
+            background-color:  #cf86ee;
+            min-width: 150px;
+            z-index: 1;
+            border:2px solid  rgb(108, 19, 87) ;
+            border-radius: 24px;
+            outline:none;
+            
+        }
+        
+        .box1:hover .box-content {
+            display: block;
+        }
+        .box-content button[type="submit"]:hover{
+background:hsl(307, 79%, 76%);
+display:block;}
+
+.box-content button{
+    border:none;
+}
+img {
+  border-radius: 50%;
+  
+}
+.pre img{
+    float:left
+}
+.text{
+text-align:center;
+padding-top:2px;;
+}
+.navbar{
+    overflow:hidden;
+    align-items: center;
+    padding: 14px 16px;
+    justify-content: center;
+    display:flex;
+}
+.navbar img{
+float:left;
+}
+.pre{
+    margin:0;
+
+}
+.forgot button{
+    position: absolute;
+    top: 88%;
+    left: 44%;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    font-size:1005;
+    border:3px solid hwb(309 15% 37%);
+    padding:14px 40px;
+    outline: none;
+    color:black ;
+    border-radius: 24px;
+    transition:0.25s;
+    cursor:pointer;
+    background:hsl(292, 72%, 74%); ;
+}
+</style>   
+</head>    
+<body>
+    <div class="navbar">
+        <div class="imaggg">
+            <img src="https://thumbs.dreamstime.com/b/isometric-line-open-book-icon-isolated-purple-background-purple-square-button-vector-illustration-isometric-line-open-book-icon-188424317.jpg" height="100px;" width="100px;" alt="Avatar">
+        </div>
+
+     <Pre style="text-align:center;color:rgb(108, 19, 87);font-family:cursive;">
+        <b style="font-size:50px;"><i>PURPLE</i></b>
+        <i style="font-size:25px;text-align:center;color:rgb(108, 19, 87);font-family:sans-serif;">Online test platform</i>
+    </Pre>
+
+    <header>
+    </div>
+    
+    
+    <form>  
+        
+        <div class="box">   
+              <h2>LOGIN</h2>
+            <input type="text" placeholder=" Username" name="username" required>  
+             
+            <input type="password" placeholder="Password" name="password" required> 
+            
+            <div class="box1">
+            <button class="box2" type="submit">LOGIN</button>
+           
+        <div class="box-content">
+            <button type="submit">Teacher</button>
+            <button type="submit">Student</button>
+            <button type="submit">Forgot?</button>
+        </div>
+    </div> 
+               
+        
+       
+    </form>     
+</body>     
+</html>
